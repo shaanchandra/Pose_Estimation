@@ -17,6 +17,9 @@ Frames annotated (%) : 7.2%
 ![Ostrich](https://github.com/shaanchandra/Pose_Estimation/blob/master/results/ostrich.gif)
 
 ### Sample result: Turkey
+
+(***NOTE:*** The library currently supports just single animal estimation in a video sequence (as seen below). Multi-animal estimation is expected in the coming releases)
+ 
 Total Frames: 421
 
 Frames annotated (#) : 50
