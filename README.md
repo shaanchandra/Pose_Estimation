@@ -5,6 +5,16 @@ The DeepLabCut library is based on the [DeepCut](https://arxiv.org/pdf/1511.0664
 
 The results below confirm this, though I trained it for just about 20k iters each example (recommended would be atleast 100k iters). During experimentaiton however it was obsevered that a representative training set is very important for the performance. This means that the training examples should contain all the different poses the subject exhibits/is expected to exihibit in the video and/or different lighting conditions (if any). Still, getting such generalizable performance from just 5-12% of annotated data is outstanding.
 
+## Code
+
+All the scripts to grab frames for annotation, labelling them using a GUI and creating a dataset are provided by the authors in the ```Demo_yourowndata.ipynb``` file under examples. You need to run these first before training. 
+
+Before running the labelling code, you need to specify the body parts and skeleton structure in the ```config.yaml```. 
+
+These steps also create a default ```pose_config.yaml``` file under *dlc_models* of the created directory. This includes a default set of training parameters like model to use (resnet_50/resnet_101/resnet_152), maxiters, etc. Edit this according to the training needs before running the training step. 
+
+(***NOTE:*** *intermediate_inference* option at layer 12 is only available for resnet_101 and resnet_152. For resent_50 you need to have it ```False``` or have layer = 1. )
+
 ## Results
 
 ### Sample result: Ostrich
