@@ -7,13 +7,27 @@ The results below confirm this, though I trained it for just about 20k iters eac
 
 ## Code
 
-All the scripts to grab frames for annotation, labelling them using a GUI and creating a dataset are provided by the authors in the ```Demo_yourowndata.ipynb``` file under examples. You need to run these first before training. 
+All the scripts to grab frames for annotation, labelling them using a GUI and creating a dataset are provided by the authors in the ```Demo_yourowndata.ipynb``` file under examples. You need to run these before training. 
 
-Before running the labelling code, you need to specify the body parts and skeleton structure in the ```config.yaml```. 
+Before running the labelling code, you need to specify the body parts and skeleton structure in the ```config.yaml``` (created when you run the cell for ```create_new_project```).
 
-These steps also create a default ```pose_config.yaml``` file under *dlc_models* of the created directory. This includes a default set of training parameters like model to use (resnet_50/resnet_101/resnet_152), maxiters, etc. Edit this according to the training needs before running the training step. 
+```extract_frames``` will open a GUI to scroll through the frames of the video and choose the frames you want to annotate. These frames will be stored under the folder *labelled_data*. 
 
-(***NOTE:*** *intermediate_inference* option at layer 12 is only available for resnet_101 and resnet_152. For resent_50 you need to have it ```False``` or have layer = 1. )
+```label_frames``` will open a GUI with the option to label the parts defined in the ```config.yaml``` file and in the frames chosen in the previous step. This will create a ***csv*** and ***h5*** file in the same destination as the frames which is used later in training.
+
+```create_training_dataset``` will create a default ```pose_config.yaml``` file under *dlc_models* of the created directory. This includes a default set of training parameters like train, test split, model to use (resnet_50/resnet_101/resnet_152), max_iters, etc. Edit this according to the training needs before running the training step. 
+
+```train_network``` will run training based on the hyperparameters specified in the ```pose_config.yaml```.
+
+```create_labeled_video``` will create the processed video with annotatoions predicted by the model on each frame along with the skeleton as specified earlier (if *draw skeleton = True*). 
+
+Things to ***NOTE***:
+
+1. *intermediate_inference* option at layer 12 is only available for resnet_101 and resnet_152. For resent_50 you need to have it ```False``` or have layer = 1.
+2. After annotating the data using ```label_frames```, please execute ```check_labels``` to cross-verify the annotations. I found that 5-10% of the times the anotations were slightly shifted/completely off from the place where I had marked them in the GUI.
+3. The ipython notebook contains more information for more functionalities. Please refer to it as needed.
+
+As future work, we can also do 3D pose estimation if we have videos from multiple cameras. Refer to the respective ipython notebook for more information. 
 
 ## Results
 
@@ -24,7 +38,7 @@ Frames annotated (#) : 38
 
 Frames annotated (%) : 7.2%
 
-![Ostrich](https://github.com/shaanchandra/Pose_Estimation/blob/master/results/ostrich2.gif)
+![Ostrich](https://gitlab.hq.braincreators.com/students/pose_estimation/blob/master/results/ostrich2.gif)
 
 ### Sample result: Cow
 Total Frames: 2495
@@ -33,7 +47,7 @@ Frames annotated (#) : 125
 
 Frames annotated (%) : 5%
 
-![Cow](https://github.com/shaanchandra/Pose_Estimation/blob/master/results/cow.gif)
+![Cow](https://gitlab.hq.braincreators.com/students/pose_estimation/blob/master/results/cow.gif)
 
 ### Sample result: Turkey
 
@@ -45,4 +59,4 @@ Frames annotated (#) : 50
 
 Frames annotated (%) : 11.8%
 
-![Turkey](https://github.com/shaanchandra/Pose_Estimation/blob/master/results/turkey.gif)
+![Turkey](https://gitlab.hq.braincreators.com/students/pose_estimation/blob/master/results/turkey.gif)
