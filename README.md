@@ -38,7 +38,7 @@ Frames annotated (#) : 38
 
 Frames annotated (%) : 7.2%
 
-![Ostrich](https://gitlab.hq.braincreators.com/students/pose_estimation/blob/master/results/ostrich2.gif)
+![Ostrich](https://github.com/shaanchandra/Pose_Estimation/blob/master/results/ostrich2.gif)
 
 ### Sample result: Cow
 Total Frames: 2495
@@ -47,7 +47,7 @@ Frames annotated (#) : 125
 
 Frames annotated (%) : 5%
 
-![Cow](https://gitlab.hq.braincreators.com/students/pose_estimation/blob/master/results/cow.gif)
+![Cow](https://github.com/shaanchandra/Pose_Estimation/blob/master/results/cow.gif)
 
 ### Sample result: Turkey
 
@@ -59,4 +59,4 @@ Frames annotated (#) : 50
 
 Frames annotated (%) : 11.8%
 
-![Turkey](https://gitlab.hq.braincreators.com/students/pose_estimation/blob/master/results/turkey.gif)
+![Turkey](https://github.com/shaanchandra/Pose_Estimation/blob/master/results/turkey.gif)
