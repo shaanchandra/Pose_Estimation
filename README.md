@@ -24,7 +24,16 @@ Frames annotated (#) : 38
 
 Frames annotated (%) : 7.2%
 
-![Ostrich](https://github.com/shaanchandra/Pose_Estimation/blob/master/results/ostrich2.gif)
+![Ostrich](https://github.com/shaanchandra/Pose_Estimation/blob/master/results/ostrich.gif)
+
+### Sample result: Cow
+Total Frames: 2495
+
+Frames annotated (#) : 125
+
+Frames annotated (%) : 5%
+
+![Cow](https://github.com/shaanchandra/Pose_Estimation/blob/master/results/cow.gif)
 
 ### Sample result: Turkey
 
