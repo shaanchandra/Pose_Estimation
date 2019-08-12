@@ -24,7 +24,7 @@ Frames annotated (#) : 38
 
 Frames annotated (%) : 7.2%
 
-![Ostrich](https://github.com/shaanchandra/Pose_Estimation/blob/master/results/ostrich.gif)
+![Ostrich](https://github.com/shaanchandra/Pose_Estimation/blob/master/results/ostrich2.gif)
 
 ### Sample result: Turkey
 
